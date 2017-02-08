@@ -14,13 +14,24 @@ CREATE TABLE Account(
  );
 
 
+CREATE TABLE Song(
+	title varchar(45) NOT NULL,
+	genre varchar(45) NOT NULL,
+	song_id INT NOT NULL,
+	date_released DATE NOT NULL
+	PRIMARY KEY (song_id)
+);
+
+CREATE TABLE Artist(
+	artist_name VARCHAR(45) NOT NULL,
+	artist_id INT NOT NULL,
+	album_or_single VARCHAR(45) NOT NULL,
+	average_rating DOUBLE PRECISION NOT NULL
+);
 
 
+/* Relationships */
 
-
-
-
-/* Relationships*/
 CREATE TABLE Gives(
 	date_published DATE NOT NULL,
 	review_id BIGINT NOT NULL,
@@ -28,7 +39,6 @@ CREATE TABLE Gives(
 	subject VARCHAR(45) NOT NULL
 	PRIMARY KEY 
 );
-
 
 
 
