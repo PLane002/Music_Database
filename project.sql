@@ -49,7 +49,33 @@ CREATE TABLE Review(
 
 /* Relationships */
 
-CREATE 
+CREATE TABLE Gives(
+	user_id INT NOT NULL,
+	review_id BIGINT NOT NULL
+);
 
+CREATE TABLE By_ (
+	artist_id INT NOT NULL,
+	song_id INT NOT NULL
+);
 
+CREATE TABLE From_ (
+	album_id INT NOT NULL,
+	artist_id INT NOT NULL
+);	
+
+CREATE TABLE IN_ (
+	song_id INT NOT NULL,
+	album_id INT NOT NULL
+);
+
+CREATE TABLE Rev_alb(
+	review_id BIGINT NOT NULL,
+	album_id INT NOT NULL
+);
+
+CREATE TABLE Rev_song(
+	song_id INT NOT NULL,
+	review_id BIGINT NOT NULL
+);
 
